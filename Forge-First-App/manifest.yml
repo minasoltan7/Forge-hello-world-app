@@ -1,0 +1,19 @@
+modules:
+  jira:issuePanel:
+    - key: forge-first-app-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Forge First App
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs20.x
+  id: ari:cloud:ecosystem::app/c0b783be-528c-4728-9193-3361b05d28af
